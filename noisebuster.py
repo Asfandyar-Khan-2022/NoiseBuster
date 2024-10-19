@@ -13,6 +13,7 @@ from queue import Queue
 import socket
 import urllib.parse
 import http.client
+import cv2
 
 # First, define required modules
 required_modules = [
@@ -27,7 +28,6 @@ required_modules = [
 InfluxDBClient = None
 SYNCHRONOUS = None
 mqtt = None
-cv2 = None
 np = None
 
 # Attempt to import required modules
@@ -540,10 +540,20 @@ def send_to_mqtt(topic, payload):
 # Capture image using camera
 def capture_image(current_peak_dB, peak_temperature, peak_weather_description, peak_precipitation, timestamp):
     if CAMERA_CONFIG.get("use_ip_camera"):
+        #CLEAN THE CODE
         if cv2 is None:
             logger.error("OpenCV library is not installed. Please install 'opencv-python' package.")
             return
         cap = cv2.VideoCapture(CAMERA_CONFIG["ip_camera_url"])
+        ret, frame = cap.read()
+        cap.release()
+    if CAMERA_CONFIG.get("use_webcam"):
+        if cv2 is None:
+            logger.error("OpenCV library is not installed. Please install 'opencv-python' package.")
+            return
+        cap = cv2.VideoCapture(0)
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, CAMERA_CONFIG.get("resolution")[0])
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, CAMERA_CONFIG.get("resolution")[1])
         ret, frame = cap.read()
         cap.release()
     else:
@@ -551,9 +561,9 @@ def capture_image(current_peak_dB, peak_temperature, peak_weather_description, p
         return
 
     if frame is not None:
-        formatted_time = timestamp.strftime("%Y-%m-%d_%H:%M:%S")
+        formatted_time = timestamp.strftime("%Y-%m-%d_%H_%M_%S")
         weather_info = f"{peak_weather_description.replace(' ', '_')}_{peak_temperature}C"
-        filename = f"{formatted_time}_{weather_info}.jpg"
+        filename = f"{formatted_time}.jpg"
         filepath = os.path.join(DEVICE_AND_NOISE_MONITORING_CONFIG['image_save_path'], filename)
 
         # Ensure the image save path exists

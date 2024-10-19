@@ -31,10 +31,11 @@
     },
     "CAMERA_CONFIG": {
         "use_ip_camera": false,
-        "use_webcam": true,
+        "use_webcam": true, 
         "use_pi_camera": false,
         "ip_camera_url": "",
         "ip_camera_protocol": "",
+        "webcam": 0,
         "rotation": 0,
         "hflip": false,
         "vflip": false,

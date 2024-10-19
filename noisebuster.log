@@ -2075,3 +2075,467 @@ usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control 
 2024-10-19 05:14:36,756 - INFO - [32mCurrent noise level: 49.7 dB[0m
 2024-10-19 05:14:36,762 - INFO - [32mAll noise levels written to realtime bucket: 49.7 dB[0m
 2024-10-19 05:14:37,138 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:32:56,487 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:32:56,733 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:32:56,733 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:32:56,733 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:32:56,733 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:32:56,733 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:32:56,733 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:32:56,733 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:32:56,733 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:32:56,733 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:32:56,743 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:32:56,743 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:32:56,753 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:32:57,698 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:32:58,256 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:32:58,262 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:32:58,276 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:33:00,632 - INFO - [32mTime window elapsed. Current peak dB: 5862.5[0m
+2024-10-19 05:33:00,632 - INFO - [32mCurrent noise level: 5862.5 dB[0m
+2024-10-19 05:33:00,641 - INFO - [32mAll noise levels written to realtime bucket: 5862.5 dB[0m
+2024-10-19 05:33:00,642 - INFO - [32mNoise level exceeded threshold: 5862.5 dB[0m
+2024-10-19 05:33:00,645 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:33:00Z', 'fields': {'noise_level': 5862.5, 'temperature': 11.78, 'weather_description': 'moderate rain', 'precipitation': 1.22}}[0m
+2024-10-19 05:33:00,645 - INFO - [32mNo camera configured or available for capturing images.[0m
+2024-10-19 05:33:03,143 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:33:03,144 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:33:03,148 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:33:05,147 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:33:05,147 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:33:05,153 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:33:07,631 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:33:07,631 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:33:07,636 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:33:10,136 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:33:10,137 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:33:10,142 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:33:12,174 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:33:12,175 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:33:12,180 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:33:13,409 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:34:48,919 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:34:49,038 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:34:49,039 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:34:49,039 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:34:49,039 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:34:49,039 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:34:49,039 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:34:49,039 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:34:49,039 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:34:49,039 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:34:49,051 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:34:49,051 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:34:49,058 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:34:49,955 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:34:50,409 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:34:50,417 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:34:50,434 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:34:52,667 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:34:52,667 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:34:52,674 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:34:52,675 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:34:52,679 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:34:52Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.78, 'weather_description': 'moderate rain', 'precipitation': 1.22}}[0m
+2024-10-19 05:34:52,679 - INFO - [32mNo camera configured or available for capturing images.[0m
+2024-10-19 05:34:54,664 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:34:54,665 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:34:54,669 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:34:57,153 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:34:57,154 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:34:57,159 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:34:59,643 - INFO - [32mTime window elapsed. Current peak dB: 47.2[0m
+2024-10-19 05:34:59,644 - INFO - [32mCurrent noise level: 47.2 dB[0m
+2024-10-19 05:34:59,648 - INFO - [32mAll noise levels written to realtime bucket: 47.2 dB[0m
+2024-10-19 05:35:01,925 - INFO - [32mTime window elapsed. Current peak dB: 50.7[0m
+2024-10-19 05:35:01,926 - INFO - [32mCurrent noise level: 50.7 dB[0m
+2024-10-19 05:35:01,929 - INFO - [32mAll noise levels written to realtime bucket: 50.7 dB[0m
+2024-10-19 05:35:04,164 - INFO - [32mTime window elapsed. Current peak dB: 47.2[0m
+2024-10-19 05:35:04,165 - INFO - [32mCurrent noise level: 47.2 dB[0m
+2024-10-19 05:35:04,171 - INFO - [32mAll noise levels written to realtime bucket: 47.2 dB[0m
+2024-10-19 05:35:06,351 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:35:09,086 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:35:09,213 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:35:09,213 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:35:09,213 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:35:09,214 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:35:09,214 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:35:09,214 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:35:09,214 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:35:09,214 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:35:09,214 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:35:09,223 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:35:09,223 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:35:09,229 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:35:10,129 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:35:10,579 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:35:10,584 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:35:10,597 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:35:12,656 - INFO - [32mTime window elapsed. Current peak dB: 5120.1[0m
+2024-10-19 05:35:12,657 - INFO - [32mCurrent noise level: 5120.1 dB[0m
+2024-10-19 05:35:12,664 - INFO - [32mAll noise levels written to realtime bucket: 5120.1 dB[0m
+2024-10-19 05:35:12,664 - INFO - [32mNoise level exceeded threshold: 5120.1 dB[0m
+2024-10-19 05:35:12,668 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:35:12Z', 'fields': {'noise_level': 5120.1, 'temperature': 11.78, 'weather_description': 'moderate rain', 'precipitation': 1.22}}[0m
+2024-10-19 05:35:12,668 - INFO - [32mNo camera configured or available for capturing images.[0m
+2024-10-19 05:35:14,663 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:35:14,665 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:35:14,672 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:35:17,513 - INFO - [32mTime window elapsed. Current peak dB: 47.2[0m
+2024-10-19 05:35:17,514 - INFO - [32mCurrent noise level: 47.2 dB[0m
+2024-10-19 05:35:17,517 - INFO - [32mAll noise levels written to realtime bucket: 47.2 dB[0m
+2024-10-19 05:35:17,895 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:35:51,108 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:35:51,225 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:35:51,225 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:35:51,225 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:35:51,225 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:35:51,225 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:35:51,226 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:35:51,226 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:35:51,226 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:35:51,226 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:35:51,234 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:35:51,234 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:35:51,241 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:35:52,156 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:35:52,761 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:35:52,767 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:35:52,783 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:35:55,167 - INFO - [32mTime window elapsed. Current peak dB: 5529.7[0m
+2024-10-19 05:35:55,168 - INFO - [32mCurrent noise level: 5529.7 dB[0m
+2024-10-19 05:35:55,171 - INFO - [32mAll noise levels written to realtime bucket: 5529.7 dB[0m
+2024-10-19 05:35:55,171 - INFO - [32mNoise level exceeded threshold: 5529.7 dB[0m
+2024-10-19 05:35:55,173 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:35:55Z', 'fields': {'noise_level': 5529.7, 'temperature': 11.78, 'weather_description': 'moderate rain', 'precipitation': 1.22}}[0m
+2024-10-19 05:35:55,173 - ERROR - [31mOpenCV library is not installed. Please install 'opencv-python' package.[0m
+2024-10-19 05:35:57,678 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:35:57,678 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:35:57,684 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:36:00,166 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:36:00,167 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:36:00,171 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:36:02,395 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:36:27,377 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:36:27,515 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:36:27,515 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:36:27,515 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:36:27,515 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:36:27,515 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:36:27,515 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:36:27,515 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:36:27,515 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:36:27,515 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:36:27,525 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:36:27,525 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:36:27,532 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:36:28,239 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:36:28,709 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:36:28,715 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:36:28,735 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:36:31,190 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:36:31,190 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:36:31,196 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:36:31,197 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:36:31,199 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:36:31Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.78, 'weather_description': 'moderate rain', 'precipitation': 1.22}}[0m
+2024-10-19 05:36:31,199 - ERROR - [31mOpenCV library is not installed. Please install 'opencv-python' package.[0m
+2024-10-19 05:36:33,205 - INFO - [32mTime window elapsed. Current peak dB: 43.6[0m
+2024-10-19 05:36:33,206 - INFO - [32mCurrent noise level: 43.6 dB[0m
+2024-10-19 05:36:33,213 - INFO - [32mAll noise levels written to realtime bucket: 43.6 dB[0m
+2024-10-19 05:36:34,460 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:37:10,667 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:37:10,799 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:37:10,799 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:37:10,799 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:37:10,799 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:37:10,799 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:37:10,799 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:37:10,800 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:37:10,800 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:37:10,800 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:37:10,809 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:37:10,809 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:37:10,816 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:37:11,513 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:37:11,972 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:37:11,975 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:37:11,990 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:37:14,171 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:37:14,171 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:37:14,178 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:37:14,178 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:37:14,181 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:37:14Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.78, 'weather_description': 'moderate rain', 'precipitation': 1.22}}[0m
+2024-10-19 05:37:14,181 - ERROR - [31mOpenCV library is not installed. Please install 'opencv-python' package.[0m
+2024-10-19 05:37:16,177 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:37:16,177 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:37:16,181 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:37:17,622 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:37:25,082 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:37:25,215 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:37:25,215 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:37:25,215 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:37:25,215 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:37:25,215 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:37:25,215 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:37:25,215 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:37:25,215 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:37:25,215 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:37:25,225 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:37:25,226 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:37:25,233 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:37:26,117 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:37:26,542 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:37:26,545 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:37:26,555 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:37:28,673 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:37:28,673 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:37:28,682 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:37:28,682 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:37:28,689 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:37:28Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.71, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:37:51,552 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:39:44,210 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:39:44,367 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:39:44,368 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:39:44,368 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:39:44,368 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:39:44,368 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:39:44,368 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:39:44,368 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:39:44,368 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:39:44,368 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:39:44,383 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:39:44,383 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:39:44,394 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:39:45,133 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:39:45,677 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:39:45,683 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:39:45,693 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:39:47,721 - INFO - [32mTime window elapsed. Current peak dB: 5529.7[0m
+2024-10-19 05:39:47,721 - INFO - [32mCurrent noise level: 5529.7 dB[0m
+2024-10-19 05:39:47,729 - INFO - [32mAll noise levels written to realtime bucket: 5529.7 dB[0m
+2024-10-19 05:39:47,729 - INFO - [32mNoise level exceeded threshold: 5529.7 dB[0m
+2024-10-19 05:39:47,733 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:39:47Z', 'fields': {'noise_level': 5529.7, 'temperature': 11.71, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:39:47,734 - ERROR - [31mOpenCV library is not installed. Please install 'opencv-python' package.[0m
+2024-10-19 05:39:49,728 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:39:49,729 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:39:49,733 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:39:50,458 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:40:48,392 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:40:48,540 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:40:48,541 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:40:48,541 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:40:48,541 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:40:48,541 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:40:48,541 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:40:48,541 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:40:48,541 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:40:48,542 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:40:48,552 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:40:48,552 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:40:48,559 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:40:49,494 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:40:49,961 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:40:49,962 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:40:49,966 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:40:52,233 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:40:52,234 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:40:52,239 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:40:52,240 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:40:52,242 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:40:52Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.71, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:40:52,242 - ERROR - [31mOpenCV library is not installed. Please install 'opencv-python' package.[0m
+2024-10-19 05:40:54,732 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:40:54,732 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:40:54,735 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:40:56,734 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:40:56,734 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:40:56,740 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:40:57,242 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:43:27,980 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:43:28,114 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:43:28,114 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:43:28,114 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:43:28,115 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:43:28,115 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:43:28,115 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:43:28,115 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:43:28,115 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:43:28,115 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:43:28,126 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:43:28,126 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:43:28,133 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:43:28,847 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:43:29,391 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:43:29,392 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:43:29,396 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:43:31,740 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:43:31,740 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:43:31,747 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:43:31,748 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:43:31,750 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:43:31Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.71, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:48:29,925 - INFO - [32mWeather data updated: Temp=11.69C, Description=light rain, Precipitation=0.75mm[0m
+2024-10-19 05:48:36,220 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:48:42,996 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:48:43,145 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:48:43,145 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:48:43,145 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:48:43,145 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:48:43,145 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:48:43,146 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:48:43,146 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:48:43,146 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:48:43,146 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:48:43,156 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:48:43,156 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:48:43,164 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:48:43,853 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:48:44,325 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:48:44,331 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:48:44,346 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:48:46,797 - INFO - [32mTime window elapsed. Current peak dB: 5120.1[0m
+2024-10-19 05:48:46,798 - INFO - [32mCurrent noise level: 5120.1 dB[0m
+2024-10-19 05:48:46,806 - INFO - [32mAll noise levels written to realtime bucket: 5120.1 dB[0m
+2024-10-19 05:48:46,806 - INFO - [32mNoise level exceeded threshold: 5120.1 dB[0m
+2024-10-19 05:48:46,809 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:48:46Z', 'fields': {'noise_level': 5120.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:49:10,866 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04:48:46_light_rain_11.69C.jpg[0m
+2024-10-19 05:49:11,260 - INFO - [32mTime window elapsed. Current peak dB: 43.6[0m
+2024-10-19 05:49:11,260 - INFO - [32mCurrent noise level: 43.6 dB[0m
+2024-10-19 05:49:11,267 - INFO - [32mAll noise levels written to realtime bucket: 43.6 dB[0m
+2024-10-19 05:49:13,290 - INFO - [32mTime window elapsed. Current peak dB: 5529.7[0m
+2024-10-19 05:49:13,290 - INFO - [32mCurrent noise level: 5529.7 dB[0m
+2024-10-19 05:49:13,296 - INFO - [32mAll noise levels written to realtime bucket: 5529.7 dB[0m
+2024-10-19 05:49:13,297 - INFO - [32mNoise level exceeded threshold: 5529.7 dB[0m
+2024-10-19 05:49:13,300 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:49:13Z', 'fields': {'noise_level': 5529.7, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:49:27,078 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:52:41,171 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:52:41,310 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:52:41,310 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:52:41,310 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:52:41,310 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:52:41,310 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:52:41,310 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:52:41,310 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:52:41,310 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:52:41,310 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:52:41,321 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:52:41,321 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:52:41,329 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:52:41,987 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:52:42,542 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:52:42,546 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:52:42,561 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:52:44,809 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:52:44,810 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:52:44,817 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:52:44,818 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:52:44,821 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:52:44Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:53:08,602 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_52_44.jpg[0m
+2024-10-19 05:53:09,020 - INFO - [32mTime window elapsed. Current peak dB: 43.6[0m
+2024-10-19 05:53:09,021 - INFO - [32mCurrent noise level: 43.6 dB[0m
+2024-10-19 05:53:09,023 - INFO - [32mAll noise levels written to realtime bucket: 43.6 dB[0m
+2024-10-19 05:53:11,329 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:53:11,330 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:53:11,334 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:53:11,334 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:53:11,336 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:53:11Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:53:35,202 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_53_11.jpg[0m
+2024-10-19 05:53:35,591 - INFO - [32mTime window elapsed. Current peak dB: 41.1[0m
+2024-10-19 05:53:35,591 - INFO - [32mCurrent noise level: 41.1 dB[0m
+2024-10-19 05:53:35,596 - INFO - [32mAll noise levels written to realtime bucket: 41.1 dB[0m
+2024-10-19 05:53:37,814 - INFO - [32mTime window elapsed. Current peak dB: 3968.1[0m
+2024-10-19 05:53:37,814 - INFO - [32mCurrent noise level: 3968.1 dB[0m
+2024-10-19 05:53:37,818 - INFO - [32mAll noise levels written to realtime bucket: 3968.1 dB[0m
+2024-10-19 05:53:37,819 - INFO - [32mNoise level exceeded threshold: 3968.1 dB[0m
+2024-10-19 05:53:37,821 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:53:37Z', 'fields': {'noise_level': 3968.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:54:02,116 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_53_37.jpg[0m
+2024-10-19 05:54:02,496 - INFO - [32mTime window elapsed. Current peak dB: 47.2[0m
+2024-10-19 05:54:02,496 - INFO - [32mCurrent noise level: 47.2 dB[0m
+2024-10-19 05:54:02,500 - INFO - [32mAll noise levels written to realtime bucket: 47.2 dB[0m
+2024-10-19 05:54:04,852 - INFO - [32mTime window elapsed. Current peak dB: 3968.1[0m
+2024-10-19 05:54:04,852 - INFO - [32mCurrent noise level: 3968.1 dB[0m
+2024-10-19 05:54:04,857 - INFO - [32mAll noise levels written to realtime bucket: 3968.1 dB[0m
+2024-10-19 05:54:04,858 - INFO - [32mNoise level exceeded threshold: 3968.1 dB[0m
+2024-10-19 05:54:04,862 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:54:04Z', 'fields': {'noise_level': 3968.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:54:28,365 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_54_04.jpg[0m
+2024-10-19 05:54:28,743 - INFO - [32mTime window elapsed. Current peak dB: 49.7[0m
+2024-10-19 05:54:28,744 - INFO - [32mCurrent noise level: 49.7 dB[0m
+2024-10-19 05:54:28,748 - INFO - [32mAll noise levels written to realtime bucket: 49.7 dB[0m
+2024-10-19 05:54:30,839 - INFO - [32mTime window elapsed. Current peak dB: 5120.1[0m
+2024-10-19 05:54:30,839 - INFO - [32mCurrent noise level: 5120.1 dB[0m
+2024-10-19 05:54:30,843 - INFO - [32mAll noise levels written to realtime bucket: 5120.1 dB[0m
+2024-10-19 05:54:30,843 - INFO - [32mNoise level exceeded threshold: 5120.1 dB[0m
+2024-10-19 05:54:30,846 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:54:30Z', 'fields': {'noise_level': 5120.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:54:54,483 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_54_30.jpg[0m
+2024-10-19 05:54:54,878 - INFO - [32mTime window elapsed. Current peak dB: 50.7[0m
+2024-10-19 05:54:54,878 - INFO - [32mCurrent noise level: 50.7 dB[0m
+2024-10-19 05:54:54,882 - INFO - [32mAll noise levels written to realtime bucket: 50.7 dB[0m
+2024-10-19 05:54:57,327 - INFO - [32mTime window elapsed. Current peak dB: 5120.1[0m
+2024-10-19 05:54:57,327 - INFO - [32mCurrent noise level: 5120.1 dB[0m
+2024-10-19 05:54:57,330 - INFO - [32mAll noise levels written to realtime bucket: 5120.1 dB[0m
+2024-10-19 05:54:57,330 - INFO - [32mNoise level exceeded threshold: 5120.1 dB[0m
+2024-10-19 05:54:57,333 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:54:57Z', 'fields': {'noise_level': 5120.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:55:21,426 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_54_57.jpg[0m
+2024-10-19 05:55:21,813 - INFO - [32mTime window elapsed. Current peak dB: 43.6[0m
+2024-10-19 05:55:21,814 - INFO - [32mCurrent noise level: 43.6 dB[0m
+2024-10-19 05:55:21,817 - INFO - [32mAll noise levels written to realtime bucket: 43.6 dB[0m
+2024-10-19 05:55:23,857 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:55:23,857 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:55:23,861 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:55:23,861 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:55:23,863 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:55:23Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:55:48,573 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_55_23.jpg[0m
+2024-10-19 05:55:48,965 - INFO - [32mTime window elapsed. Current peak dB: 45.6[0m
+2024-10-19 05:55:48,965 - INFO - [32mCurrent noise level: 45.6 dB[0m
+2024-10-19 05:55:48,968 - INFO - [32mAll noise levels written to realtime bucket: 45.6 dB[0m
+2024-10-19 05:55:51,348 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:55:51,348 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:55:51,352 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:55:51,353 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:55:51,355 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:55:51Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.69, 'weather_description': 'light rain', 'precipitation': 0.75}}[0m
+2024-10-19 05:56:15,325 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_55_51.jpg[0m
+2024-10-19 05:56:15,748 - INFO - [32mTime window elapsed. Current peak dB: 43.6[0m
+2024-10-19 05:56:15,749 - INFO - [32mCurrent noise level: 43.6 dB[0m
+2024-10-19 05:56:15,753 - INFO - [32mAll noise levels written to realtime bucket: 43.6 dB[0m
+2024-10-19 05:56:17,882 - INFO - [32mTime window elapsed. Current peak dB: 3968.1[0m
+2024-10-19 05:56:17,883 - INFO - [32mCurrent noise level: 3968.1 dB[0m
+2024-10-19 05:56:17,887 - INFO - [32mAll noise levels written to realtime bucket: 3968.1 dB[0m
+2024-10-19 05:56:17,887 - INFO - [32mNoise level exceeded threshold: 3968.1 dB[0m
+2024-10-19 05:56:17,889 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:56:17Z', 'fields': {'noise_level': 3968.1, 'temperature': 11.72, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:56:41,361 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_56_17.jpg[0m
+2024-10-19 05:56:41,747 - INFO - [32mTime window elapsed. Current peak dB: 49.7[0m
+2024-10-19 05:56:41,747 - INFO - [32mCurrent noise level: 49.7 dB[0m
+2024-10-19 05:56:41,752 - INFO - [32mAll noise levels written to realtime bucket: 49.7 dB[0m
+2024-10-19 05:56:43,861 - INFO - [32mTime window elapsed. Current peak dB: 5529.7[0m
+2024-10-19 05:56:43,862 - INFO - [32mCurrent noise level: 5529.7 dB[0m
+2024-10-19 05:56:43,869 - INFO - [32mAll noise levels written to realtime bucket: 5529.7 dB[0m
+2024-10-19 05:56:43,870 - INFO - [32mNoise level exceeded threshold: 5529.7 dB[0m
+2024-10-19 05:56:43,875 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:56:43Z', 'fields': {'noise_level': 5529.7, 'temperature': 11.72, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:57:01,608 - INFO - [32mManual interruption by user.[0m
+2024-10-19 05:57:07,300 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 05:57:07,445 - INFO - [32mChecking configuration...[0m
+2024-10-19 05:57:07,445 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 05:57:07,445 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 05:57:07,445 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 05:57:07,445 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 05:57:07,446 - INFO - [32mIP Camera is disabled.[0m
+2024-10-19 05:57:07,446 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 05:57:07,446 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 05:57:07,446 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 05:57:07,456 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 05:57:07,456 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 05:57:07,464 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 05:57:08,208 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 05:57:08,751 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 05:57:08,755 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 05:57:08,763 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 05:57:10,853 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:57:10,855 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:57:10,868 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:57:10,869 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:57:10,873 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:57:10Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.72, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:58:22,436 - INFO - [32mImage saved: C:/Users/a_asf/Pictures/noise_buster_images\2024-10-19_04_57_10.jpg[0m
+2024-10-19 05:58:22,852 - INFO - [32mTime window elapsed. Current peak dB: 43.6[0m
+2024-10-19 05:58:22,853 - INFO - [32mCurrent noise level: 43.6 dB[0m
+2024-10-19 05:58:22,856 - INFO - [32mAll noise levels written to realtime bucket: 43.6 dB[0m
+2024-10-19 05:58:24,896 - INFO - [32mTime window elapsed. Current peak dB: 4608.1[0m
+2024-10-19 05:58:24,896 - INFO - [32mCurrent noise level: 4608.1 dB[0m
+2024-10-19 05:58:24,900 - INFO - [32mAll noise levels written to realtime bucket: 4608.1 dB[0m
+2024-10-19 05:58:24,900 - INFO - [32mNoise level exceeded threshold: 4608.1 dB[0m
+2024-10-19 05:58:24,902 - INFO - [32mHigh noise level data written to main bucket: {'measurement': 'noise_buster_events', 'tags': {'location': 'noise_buster'}, 'time': '2024-10-19T04:58:24Z', 'fields': {'noise_level': 4608.1, 'temperature': 11.72, 'weather_description': 'light rain', 'precipitation': 1.0}}[0m
+2024-10-19 05:58:47,618 - INFO - [32mManual interruption by user.[0m
