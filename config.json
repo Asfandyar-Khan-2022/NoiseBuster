@@ -39,6 +39,7 @@
         "rotation": 0,
         "hflip": false,
         "vflip": false,
+        "record video": true,
         "resolution": [1920, 1080]
     },
     "IMAGE_STORAGE_CONFIG": {

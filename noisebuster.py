@@ -3,6 +3,7 @@
 
 import sys
 import os
+os.environ["OPENCV_VIDEOIO_MSMF_ENABLE_HW_TRANSFORMS"] = "0"
 import logging
 import json
 import time
@@ -636,10 +637,9 @@ def update_noise_level():
     peak_precipitation_float = 0.0
 
     global dev
-    dev = detect_usb_device(verbose=False)
+    dev = detect_usb_device()
     if dev is None:
         logger.error("USB sound meter device not found")
-        sys.exit(1)
     else:
         logger.info("USB sound meter device connected")
 
@@ -648,7 +648,6 @@ def update_noise_level():
         if current_time - window_start_time >= DEVICE_AND_NOISE_MONITORING_CONFIG['time_window_duration']:
             timestamp = datetime.utcnow()
             delete_old_images()
-            logger.info(f"Time window elapsed. Current peak dB: {round(current_peak_dB, 1)}")
 
             # Publish real-time noise level
             realtime_data = [{
@@ -657,28 +656,19 @@ def update_noise_level():
                 "time": timestamp.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "fields": {"noise_level": round(current_peak_dB, 1)}
             }]
-
-            # Log the current peak dB regardless of InfluxDB or MQTT
-            logger.info(f"Current noise level: {round(current_peak_dB, 1)} dB")
-
-            # Send data to InfluxDB if enabled
-            if INFLUXDB_CONFIG.get("enabled") and influxdb_client and write_api:
-                try:
+            try:
+                if INFLUXDB_CONFIG["enabled"]:
                     write_api.write(bucket=INFLUXDB_CONFIG['realtime_bucket'], record=realtime_data)
                     logger.info(f"All noise levels written to realtime bucket: {round(current_peak_dB, 1)} dB")
-                except Exception as e:
-                    logger.error(f"Failed to write to InfluxDB: {str(e)}. Adding to queue.")
-                    logger.debug("Exception details:", exc_info=True)
-                    failed_writes_queue.put((INFLUXDB_CONFIG['realtime_bucket'], [realtime_data]))
-            else:
-                logger.debug("InfluxDB is disabled or not properly configured; skipping write.")
 
-            # Publish to MQTT if enabled
-            if mqtt_client and MQTT_CONFIG.get("enabled"):
+                # Publish to MQTT for all readings
                 realtime_topic = f"homeassistant/sensor/{DEVICE_AND_NOISE_MONITORING_CONFIG['device_name']}/realtime_noise_levels/state"
                 realtime_payload = json.dumps(realtime_data[0]['fields'])
                 send_to_mqtt(realtime_topic, realtime_payload)
-                logger.info(f"Data published to MQTT: {realtime_topic} -> {realtime_payload}")
+
+            except Exception as e:
+                logger.error(f"Failed to write to InfluxDB: {str(e)}. Adding to queue.")
+                failed_writes_queue.put((INFLUXDB_CONFIG['realtime_bucket'], [realtime_data]))
 
             if current_peak_dB >= DEVICE_AND_NOISE_MONITORING_CONFIG['minimum_noise_level']:
                 peak_temperature_float = float(peak_temperature) if peak_temperature is not None else 0.0
@@ -691,32 +681,22 @@ def update_noise_level():
                         "noise_level": round(current_peak_dB, 1),
                         "temperature": peak_temperature_float,
                         "weather_description": peak_weather_description_adjusted,
-                        "precipitation": peak_precipitation_float
+                        "precipitation_float": peak_precipitation_float
                     }
                 }
-
-                # Log the event of noise level exceeding the threshold
-                logger.info(f"Noise level exceeded threshold: {round(current_peak_dB, 1)} dB")
-
-                # Send data to InfluxDB if enabled
-                if INFLUXDB_CONFIG.get("enabled") and influxdb_client and write_api:
-                    try:
+                try:
+                    if INFLUXDB_CONFIG["enabled"]:
                         write_api.write(bucket=INFLUXDB_CONFIG['bucket'], record=main_data)
                         logger.info(f"High noise level data written to main bucket: {main_data}")
-                    except Exception as e:
-                        logger.error(f"Failed to write to InfluxDB: {str(e)}. Adding to queue.")
-                        logger.debug("Exception details:", exc_info=True)
-                        failed_writes_queue.put((INFLUXDB_CONFIG['bucket'], [main_data]))
-                else:
-                    logger.debug("InfluxDB is disabled or not properly configured; skipping write.")
 
-                # Publish to MQTT if enabled
-                if mqtt_client and MQTT_CONFIG.get("enabled"):
+                    # Publish to MQTT for events exceeding the threshold
                     event_topic = f"homeassistant/sensor/{DEVICE_AND_NOISE_MONITORING_CONFIG['device_name']}/noise_levels/state"
                     event_payload = json.dumps(main_data['fields'])
                     send_to_mqtt(event_topic, event_payload)
-                    logger.info(f"Data published to MQTT: {event_topic} -> {event_payload}")
 
+                except Exception as e:
+                    logger.error(f"Failed to write to InfluxDB: {str(e)}. Adding to queue.")
+                    failed_writes_queue.put((INFLUXDB_CONFIG['bucket'], [main_data]))
                 capture_image(current_peak_dB, peak_temperature_float, peak_weather_description_adjusted, peak_precipitation_float, timestamp)
 
             window_start_time = current_time
@@ -726,42 +706,29 @@ def update_noise_level():
             peak_precipitation_float = 0.0
 
         # Read current noise level from the device
-        # This code needs to be cleaned
-        # create a function and remove the duplicate
         try:
-            ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
-            dB = (ret[0] + ((ret[1] & 3) * 256)) * 0.1 + 30
-            dB = round(dB, 1)  # Round to one decimal place
-            if dB > current_peak_dB:
-                current_peak_dB = dB
-                if WEATHER_CONFIG.get("enabled"):
+            if dev:
+                endpoint = 0x82
+                ret = dev.read(endpoint, 7)
+                dB = (ret[1] * 256 + ret[2])/10 
+                if dB > current_peak_dB and dB < 150: # I ADDED 150 AS I GET A PEAK OF FEW THOUSAND FOR SOME REASON
+                    current_peak_dB = dB
                     peak_temperature, peak_weather_description, precipitation = get_weather()
                     peak_precipitation_float = float(precipitation)
-        except OSError:
-            endpoint = 0x82
-            ret = dev.read(endpoint, 7)
-            dB = (ret[1] * 256 + ret[2])/10 
-            dB = round(dB, 1)  # Round to one decimal place
-            if dB > current_peak_dB < 150:
-                current_peak_dB = dB
-                if WEATHER_CONFIG.get("enabled"):
-                    peak_temperature, peak_weather_description, precipitation = get_weather()
-                    peak_precipitation_float = float(precipitation)
-        except OSError:
-            logger.error("USB device not available")
+            else:
+                logger.error("USB device not available")
         except usb.core.USBError as usb_err:
             logger.error(f"USB Error reading from device: {str(usb_err)}")
-            logger.debug("Exception details:", exc_info=True)
-            dev = detect_usb_device(verbose=False)
+            dev = detect_usb_device()
             if dev is None:
                 logger.error("Device not found on re-scan")
             else:
                 logger.info("Reconnected to USB device")
         except Exception as e:
             logger.error(f"Unexpected error reading from device: {str(e)}")
-            logger.debug("Exception details:", exc_info=True)
 
         time.sleep(0.1)
+
     
 def schedule_tasks():
     try:
