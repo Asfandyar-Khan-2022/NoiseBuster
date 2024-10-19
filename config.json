@@ -1,26 +1,26 @@
 {
     "INFLUXDB_CONFIG": {
-        "enabled": false,
+        "enabled": true,
         "host": "127.0.0.1",
         "port": 8086,
-        "token": "<YOUR_INFLUXDB_TOKEN>",
-        "org": "<YOUR_INFLUXDB_ORG>",
+        "token": "0bRo3Spmt1t7gAmCdG5hLLLLxDiDB7uTFqGpdz_O-KsdbWPzNFYM3ZoUh5tFaCVe0B7mxKdlLpWAOgm4NWF3Dg==",
+        "org": "noise_buster",
         "bucket": "noise_buster",
         "realtime_bucket": "noise_buster_realtime",
         "timeout": 20000,
         "ssl": false
     },
     "PUSHOVER_CONFIG": {
-        "enabled": false,
-        "user_key": "<YOUR_PUSHOVER_USER_KEY>",
-        "api_token": "<YOUR_PUSHOVER_API_TOKEN>",
+        "enabled": true,
+        "user_key": "uwbhrn5ii8r8naqpg3wxuw8pk5tboz",
+        "api_token": "ap2a2z9t58j3vy6eg817heouk7ypqh",
         "title": "Noise Buster"
     },
     "WEATHER_CONFIG": {
-        "enabled": false,
-        "api_key": "<YOUR_OPENWEATHERMAP_API_KEY>",
-        "api_url": "http://api.openweathermap.org/data/2.5/weather",
-        "location": "City,CountryCode"
+        "enabled": true,
+        "api_key": "aba42c59847404612de0c92a668acec0",
+        "api_url": "https://api.openweathermap.org/data/2.5/weather",
+        "location": "Birmingham,uk"
     },
     "MQTT_CONFIG": {
         "enabled": false,
@@ -30,26 +30,26 @@
         "password": "<YOUR_MQTT_PASSWORD>"
     },
     "CAMERA_CONFIG": {
-        "use_ip_camera": false,
+        "use_ip_camera": true,
         "use_pi_camera": false,
-        "ip_camera_url": "",
-        "ip_camera_protocol": "rtsp",
+        "ip_camera_url": "http://localhost:56000/mjpeg",
+        "ip_camera_protocol": "",
         "rotation": 0,
         "hflip": false,
         "vflip": false,
-        "resolution": [640, 480]
+        "resolution": [1920, 1080]
     },
     "IMAGE_STORAGE_CONFIG": {
-        "store_in_db": false
+        "store_in_db": true
     },
     "DEVICE_AND_NOISE_MONITORING_CONFIG": {
-        "device_name": "noise_buster_device",
-        "minimum_noise_level": 80,
+        "device_name": "USB-SERIAL CH340 (COM9)",
+        "minimum_noise_level": 70,
         "time_window_duration": 2,
-        "image_save_path": "./images/",
+        "image_save_path": "C:/Users/a_asf/Pictures/noise_buster_images",
         "image_retention_hours": 24,
-        "usb_vendor_id": "",
-        "usb_product_id": ""
+        "usb_vendor_id": "0x1a86",
+        "usb_product_id": "0x7523"
     },
     "TELRAAM_API_CONFIG": {
         "api_url": "https://telraam-api.net/v1/reports/traffic",
@@ -62,7 +62,7 @@
         "timezone_offset": 0
     },
     "DISCORD_CONFIG": {
-        "enabled": false,
-        "webhook_url": "<YOUR_DISCORD_WEBHOOK_URL>"
+        "enabled": true,
+        "webhook_url": "https://discord.com/api/webhooks/1296688395837243402/cPH73hr7Zg_7wa5BYkKKaq57816F1DHD3aAM0LvIy3R8SgSTevuX5tJwBZpR_nkAmp9a"
     }
 }

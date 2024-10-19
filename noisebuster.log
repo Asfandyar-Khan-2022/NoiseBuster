@@ -1,0 +1,962 @@
+2024-10-19 04:04:57,985 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 04:04:58,197 - INFO - [32mChecking configuration...[0m
+2024-10-19 04:04:58,198 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 04:04:58,198 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 04:04:58,198 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 04:04:58,198 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 04:04:58,198 - ERROR - [31mIP Camera is enabled but missing required configurations: ip_camera_protocol. Feature will be disabled.[0m
+2024-10-19 04:04:58,198 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 04:04:58,200 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 04:04:58,200 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 04:04:58,210 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 04:04:58,210 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 04:04:58,221 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 04:04:59,090 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 04:04:59,586 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 04:04:59,588 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 04:04:59,592 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 04:04:59,593 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:04:59,593 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:04:59,597 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:04:59,709 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:04:59,710 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:04:59,722 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:04:59,833 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:04:59,835 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:04:59,845 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:04:59,956 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:04:59,957 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:04:59,963 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,065 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,067 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,094 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,205 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,207 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,230 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,345 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,348 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,366 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,467 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,468 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,484 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,592 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,594 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,607 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,717 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,718 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,732 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,842 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,845 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,877 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:00,983 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:00,985 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:00,995 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:01,107 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:01,108 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:01,131 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:01,248 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:01,250 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:01,258 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:01,372 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:01,375 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:01,402 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:01,512 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:01,514 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:01,531 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:01,653 - INFO - [32mTime window elapsed. Current peak dB: 0[0m
+2024-10-19 04:05:01,654 - INFO - [32mCurrent noise level: 0 dB[0m
+2024-10-19 04:05:03,707 - ERROR - [31mFailed to write to InfluxDB: <urllib3.connection.HTTPConnection object at 0x0000020FFFABEA70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it. Adding to queue.[0m
+2024-10-19 04:05:03,708 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 657, in update_noise_level
+    write_api.write(bucket=INFLUXDB_CONFIG['realtime_bucket'], record=realtime_data)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 378, in write
+    results = list(map(write_payload, payloads.items()))
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 376, in write_payload
+    return self._post_write(_async_req, bucket, org, final_string, payload[0])
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 509, in _post_write
+    return self._write_service.post_write(org=org, bucket=bucket, body=body, precision=precision,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\service\write_service.py", line 60, in post_write
+    (data) = self.post_write_with_http_info(org, bucket, body, **kwargs)  # noqa: E501
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\service\write_service.py", line 90, in post_write_with_http_info
+    return self.api_client.call_api(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 343, in call_api
+    return self.__call_api(resource_path, method,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 173, in __call_api
+    response_data = self.request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 388, in request
+    return self.rest_client.POST(url,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\rest.py", line 311, in POST
+    return self.request("POST", url,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\rest.py", line 220, in request
+    r = self.pool_manager.request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\request.py", line 81, in request
+    return self.request_encode_body(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\util\retry.py", line 527, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1038, in _send_output
+    self.send(msg)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 976, in send
+    self.connect()
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020FFFABEA70>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+2024-10-19 04:05:03,716 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:03,717 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:03,727 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:03,847 - INFO - [32mTime window elapsed. Current peak dB: 0[0m
+2024-10-19 04:05:03,847 - INFO - [32mCurrent noise level: 0 dB[0m
+2024-10-19 04:05:05,905 - ERROR - [31mFailed to write to InfluxDB: <urllib3.connection.HTTPConnection object at 0x0000020FFFABD870>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it. Adding to queue.[0m
+2024-10-19 04:05:05,907 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\util\connection.py", line 95, in create_connection
+    raise err
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 657, in update_noise_level
+    write_api.write(bucket=INFLUXDB_CONFIG['realtime_bucket'], record=realtime_data)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 378, in write
+    results = list(map(write_payload, payloads.items()))
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 376, in write_payload
+    return self._post_write(_async_req, bucket, org, final_string, payload[0])
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 509, in _post_write
+    return self._write_service.post_write(org=org, bucket=bucket, body=body, precision=precision,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\service\write_service.py", line 60, in post_write
+    (data) = self.post_write_with_http_info(org, bucket, body, **kwargs)  # noqa: E501
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\service\write_service.py", line 90, in post_write_with_http_info
+    return self.api_client.call_api(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 343, in call_api
+    return self.__call_api(resource_path, method,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 173, in __call_api
+    response_data = self.request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 388, in request
+    return self.rest_client.POST(url,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\rest.py", line 311, in POST
+    return self.request("POST", url,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\rest.py", line 220, in request
+    r = self.pool_manager.request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\request.py", line 81, in request
+    return self.request_encode_body(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\request.py", line 173, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\poolmanager.py", line 376, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connectionpool.py", line 802, in urlopen
+    retries = retries.increment(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\util\retry.py", line 527, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\packages\six.py", line 770, in reraise
+    raise value
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connectionpool.py", line 716, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connectionpool.py", line 416, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 244, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 1038, in _send_output
+    self.send(msg)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\http\client.py", line 976, in send
+    self.connect()
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 205, in connect
+    conn = self._new_conn()
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x0000020FFFABD870>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+2024-10-19 04:05:05,910 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:05,911 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:05,922 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:06,038 - INFO - [32mTime window elapsed. Current peak dB: 0[0m
+2024-10-19 04:05:06,038 - INFO - [32mCurrent noise level: 0 dB[0m
+2024-10-19 04:05:06,710 - INFO - [32mManual interruption by user.[0m
+2024-10-19 04:05:24,540 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 04:05:24,763 - INFO - [32mChecking configuration...[0m
+2024-10-19 04:05:24,763 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 04:05:24,763 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 04:05:24,763 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 04:05:24,764 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 04:05:24,764 - ERROR - [31mIP Camera is enabled but missing required configurations: ip_camera_protocol. Feature will be disabled.[0m
+2024-10-19 04:05:24,764 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 04:05:24,764 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 04:05:24,764 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 04:05:24,774 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 04:05:24,774 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 04:05:24,780 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 04:05:25,627 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 04:05:26,057 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 04:05:26,061 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 04:05:26,073 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 04:05:26,073 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,074 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,084 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,187 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,189 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,206 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,311 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,313 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,341 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,452 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,452 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,463 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,575 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,578 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,587 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,699 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,700 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,719 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,825 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,826 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,836 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:26,948 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:26,949 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:26,959 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,076 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,078 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,100 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,215 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,216 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,227 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,340 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,342 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,362 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,466 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,467 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,474 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,589 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,590 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,608 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,716 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,718 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,732 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,841 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,842 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,861 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:27,966 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:27,968 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:27,979 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,104 - INFO - [32mTime window elapsed. Current peak dB: 0[0m
+2024-10-19 04:05:28,105 - INFO - [32mCurrent noise level: 0 dB[0m
+2024-10-19 04:05:28,151 - ERROR - [31mFailed to write to InfluxDB: (422)
+Reason: Unprocessable Entity
+HTTP response headers: HTTPHeaderDict({'Content-Type': 'application/json; charset=utf-8', 'X-Influxdb-Build': 'OSS', 'X-Influxdb-Version': 'v2.7.10', 'X-Platform-Error-Code': 'unprocessable entity', 'Date': 'Sat, 19 Oct 2024 03:05:28 GMT', 'Content-Length': '238'})
+HTTP response body: {"code":"unprocessable entity","message":"failure writing points to database: partial write: field type conflict: input field \"noise_level\" on measurement \"noise_buster_events\" is type integer, already exists as type float dropped=1"}
+. Adding to queue.[0m
+2024-10-19 04:05:28,151 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 657, in update_noise_level
+    write_api.write(bucket=INFLUXDB_CONFIG['realtime_bucket'], record=realtime_data)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 378, in write
+    results = list(map(write_payload, payloads.items()))
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 376, in write_payload
+    return self._post_write(_async_req, bucket, org, final_string, payload[0])
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\client\write_api.py", line 509, in _post_write
+    return self._write_service.post_write(org=org, bucket=bucket, body=body, precision=precision,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\service\write_service.py", line 60, in post_write
+    (data) = self.post_write_with_http_info(org, bucket, body, **kwargs)  # noqa: E501
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\service\write_service.py", line 90, in post_write_with_http_info
+    return self.api_client.call_api(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 343, in call_api
+    return self.__call_api(resource_path, method,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 173, in __call_api
+    response_data = self.request(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\api_client.py", line 388, in request
+    return self.rest_client.POST(url,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\rest.py", line 311, in POST
+    return self.request("POST", url,
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\influxdb_client\_sync\rest.py", line 261, in request
+    raise ApiException(http_resp=r)
+influxdb_client.rest.ApiException: (422)
+Reason: Unprocessable Entity
+HTTP response headers: HTTPHeaderDict({'Content-Type': 'application/json; charset=utf-8', 'X-Influxdb-Build': 'OSS', 'X-Influxdb-Version': 'v2.7.10', 'X-Platform-Error-Code': 'unprocessable entity', 'Date': 'Sat, 19 Oct 2024 03:05:28 GMT', 'Content-Length': '238'})
+HTTP response body: {"code":"unprocessable entity","message":"failure writing points to database: partial write: field type conflict: input field \"noise_level\" on measurement \"noise_buster_events\" is type integer, already exists as type float dropped=1"}
+
+2024-10-19 04:05:28,153 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,153 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,158 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,263 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,264 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,281 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,386 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,388 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,405 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,511 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,512 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,525 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,636 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,639 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,654 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,761 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,763 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,775 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:28,885 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:28,887 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:28,905 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,010 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:29,011 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:29,025 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,133 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:29,136 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:29,150 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,257 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:29,260 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:29,280 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,383 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:29,385 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:29,396 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,507 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:29,508 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:29,515 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,619 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:05:29,621 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:05:29,629 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:05:29,639 - INFO - [32mManual interruption by user.[0m
+2024-10-19 04:06:34,019 - INFO - [32mDetailed logs are saved in 'noisebuster.log'.[0m
+2024-10-19 04:06:34,221 - INFO - [32mChecking configuration...[0m
+2024-10-19 04:06:34,221 - INFO - [32mInfluxDB is enabled and properly configured.[0m
+2024-10-19 04:06:34,221 - INFO - [32mPushover is enabled and properly configured.[0m
+2024-10-19 04:06:34,221 - INFO - [32mWeather data collection is enabled and properly configured.[0m
+2024-10-19 04:06:34,222 - INFO - [32mMQTT is disabled.[0m
+2024-10-19 04:06:34,222 - ERROR - [31mIP Camera is enabled but missing required configurations: ip_camera_protocol. Feature will be disabled.[0m
+2024-10-19 04:06:34,222 - INFO - [32mTelraam data collection is disabled.[0m
+2024-10-19 04:06:34,222 - INFO - [32mDiscord notifications are enabled and properly configured.[0m
+2024-10-19 04:06:34,222 - INFO - [32mMinimum noise level set to 70 dB.[0m
+2024-10-19 04:06:34,231 - INFO - [32mDetected specified device: That mysterious volume meter darksider did buy (Vendor ID 0x1a86, Product ID 0x7523)[0m
+2024-10-19 04:06:34,232 - INFO - [32mSound meter successfully connected.[0m
+2024-10-19 04:06:34,241 - INFO - [32mStarting Noise Monitoring[0m
+2024-10-19 04:06:34,679 - INFO - [32mPushover notification sent: Noise Buster has started monitoring.[0m
+2024-10-19 04:06:35,128 - INFO - [32mDiscord notification sent successfully.[0m
+2024-10-19 04:06:35,132 - INFO - [32mWeather data update task has been scheduled to run every 5 minutes.[0m
+2024-10-19 04:06:35,141 - INFO - [32mUSB sound meter device connected[0m
+2024-10-19 04:06:35,142 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,143 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,149 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:35,252 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,255 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,272 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:35,377 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,378 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,391 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:35,500 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,502 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,517 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:35,625 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,627 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,654 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:35,764 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,767 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,785 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:35,889 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:35,892 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:35,914 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:36,028 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:36,030 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:36,042 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:36,155 - ERROR - [31mUSB Error reading from device: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'[0m
+2024-10-19 04:06:36,156 - DEBUG - Exception details:
+Traceback (most recent call last):
+  File "D:\programming\personal_project\noise_nuisance\noise_buster_fork\NoiseBuster\noisebuster.py", line 721, in update_noise_level
+    ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\core.py", line 1082, in ctrl_transfer
+    ret = self._ctx.backend.ctrl_transfer(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 601, in ctrl_transfer
+    return _check(_lib.usb_control_msg(
+  File "C:\Users\a_asf\.conda\envs\noise_buster\lib\site-packages\usb\backend\libusb0.py", line 447, in _check
+    raise USBError(errmsg, ret)
+usb.core.USBError: [Errno None] b'libusb0-dll:err [control_msg] sending control message failed, win error: A device attached to the system is not functioning.\r\n\n'
+2024-10-19 04:06:36,171 - INFO - [32mReconnected to USB device[0m
+2024-10-19 04:06:36,261 - INFO - [32mManual interruption by user.[0m
