@@ -716,18 +716,29 @@ def update_noise_level():
             peak_precipitation_float = 0.0
 
         # Read current noise level from the device
+        # This code needs to be cleaned
+        # create a function and remove the duplicate
         try:
-            if dev:
-                ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
-                dB = (ret[0] + ((ret[1] & 3) * 256)) * 0.1 + 30
-                dB = round(dB, 1)  # Round to one decimal place
-                if dB > current_peak_dB:
-                    current_peak_dB = dB
-                    if WEATHER_CONFIG.get("enabled"):
-                        peak_temperature, peak_weather_description, precipitation = get_weather()
-                        peak_precipitation_float = float(precipitation)
-            else:
-                logger.error("USB device not available")
+            ret = dev.ctrl_transfer(0xC0, 4, 0, 0, 200)
+            dB = (ret[0] + ((ret[1] & 3) * 256)) * 0.1 + 30
+            dB = round(dB, 1)  # Round to one decimal place
+            if dB > current_peak_dB:
+                current_peak_dB = dB
+                if WEATHER_CONFIG.get("enabled"):
+                    peak_temperature, peak_weather_description, precipitation = get_weather()
+                    peak_precipitation_float = float(precipitation)
+        except OSError:
+            endpoint = 0x82
+            ret = dev.read(endpoint, 7)
+            dB = (ret[1] * 256 + ret[2])/10 
+            dB = round(dB, 1)  # Round to one decimal place
+            if dB > current_peak_dB < 150:
+                current_peak_dB = dB
+                if WEATHER_CONFIG.get("enabled"):
+                    peak_temperature, peak_weather_description, precipitation = get_weather()
+                    peak_precipitation_float = float(precipitation)
+        except OSError:
+            logger.error("USB device not available")
         except usb.core.USBError as usb_err:
             logger.error(f"USB Error reading from device: {str(usb_err)}")
             logger.debug("Exception details:", exc_info=True)
@@ -741,7 +752,7 @@ def update_noise_level():
             logger.debug("Exception details:", exc_info=True)
 
         time.sleep(0.1)
-
+    
 def schedule_tasks():
     try:
         if TELRAAM_API_CONFIG.get("enabled"):

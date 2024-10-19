@@ -30,9 +30,10 @@
         "password": "<YOUR_MQTT_PASSWORD>"
     },
     "CAMERA_CONFIG": {
-        "use_ip_camera": true,
+        "use_ip_camera": false,
+        "use_webcam": true,
         "use_pi_camera": false,
-        "ip_camera_url": "http://localhost:56000/mjpeg",
+        "ip_camera_url": "",
         "ip_camera_protocol": "",
         "rotation": 0,
         "hflip": false,
